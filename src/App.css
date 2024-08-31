@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; /* Prevent body overflow */
+}
+
+/* Container */
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 100%; /* Prevent overflow from exceeding viewport width */
+  width: 90%; /* Use percentage for responsiveness */
+  max-width: 500px; /* Max width to maintain a reasonable size */
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden; /* Ensure no overflow within the container */
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+  }
+  
+  .dark-mode .container {
+    background-color: #2e2e2e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .dark-mode input[type="text"] {
+    background-color: #333;
+    color: #f0f0f0;
+    border: 1px solid #555;
+  }
+  
+  .dark-mode button {
+    background-color: #333;
+    color: #f0f0f0;
+  }
+  
+  .dark-mode button:hover {
+    background-color: #444;
+  }
+  
+  /* Light Mode Styles */
+  .light-mode {
+    background-color: #f0f4f8;
+    color: #333;
+  }
+  
+  .light-mode .container {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .light-mode input[type="text"] {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+  
+  .light-mode button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .light-mode button:hover {
+    background-color: #0056b3;
+  }
+
+/* Title */
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Input Fields */
+input[type="text"] {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+/* Button */
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Full width button */
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Margin and Spacing */
+p {
+  margin: 10px 0;
+}
+
+br {
+  margin-bottom: 10px;
+}
+
+/* Container for the entire seed phrase component */
+.seed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 600px; /* Increased max-width for better layout */
+  margin: 0 auto;
+}
+
+/* Title */
+.seed-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+/* Toggle button */
+.seed-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.seed-container button:hover {
+  background-color: #0056b3;
+}
+
+.seed-container button:focus {
+  outline: none;
+}
+
+/* Container for the seed phrase boxes */
+.seed-phrase {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 10px; /* Space between boxes */
+  justify-content: center;
+  width: 100%; /* Ensure full width */
+  box-sizing: border-box;
+}
+
+/* Individual seed word boxes */
+.seed-word {
+  width: 100%; /* Full width of grid cell */
+  min-width: 0; /* Allow for flexible width */
+  height: auto; /* Auto height to fit content */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  box-sizing: border-box;
+  white-space: normal; /* Allow text to wrap */
+  overflow: visible; /* Ensure text is visible */
+}
+
+/* Hidden state */
+.seed-phrase.hidden .seed-word {
+  background-color: #f0f0f0;
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  border-color: #ccc;
+  pointer-events: none;
+}
+
+.seed-phrase.hidden .seed-word::placeholder {
+  color: transparent;
+}
+
+.seed-word:focus {
+  outline: none;
+  border-color: #007bff;
+}
+

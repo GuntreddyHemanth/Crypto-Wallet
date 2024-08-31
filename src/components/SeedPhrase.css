@@ -1,0 +1,77 @@
+.seed-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    max-width: 600px; /* Increased max-width for better layout */
+    margin: 0 auto;
+  }
+  
+  /* Title */
+  .seed-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  /* Toggle button */
+  .seed-container button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .seed-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .seed-container button:focus {
+    outline: none;
+  }
+  
+  /* Container for the seed phrase boxes */
+  .seed-phrase {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  /* Individual seed word boxes */
+  .seed-word {
+    width: auto; /* Auto width to accommodate text */
+    min-width: 120px; /* Minimum width for consistency */
+    height: auto; /* Auto height to fit content */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 14px;
+    box-sizing: border-box;
+    white-space: normal; /* Allow text to wrap */
+  }
+  
+  /* Hidden state */
+  .seed-phrase.hidden .seed-word {
+    background-color: #f0f0f0;
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border-color: #ccc;
+    pointer-events: none;
+  }
+  
+  .seed-phrase.hidden .seed-word::placeholder {
+    color: transparent;
+  }
+  
+  .seed-word:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+  
